@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-paper text-ink font-sc;
+    overflow-x: hidden;
+    position: relative;
+  }
+  /* Paper grid texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(20, 18, 16, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(20, 18, 16, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  /* Noise grain */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.07 0 0 0 0 0.06 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+  }
+}
+
+@layer components {
+  .tape-strip {
+    background: repeating-linear-gradient(
+      135deg,
+      #fdd835 0 22px,
+      #141210 22px 44px
+    );
+  }
+
+  .btn-primary {
+    @apply font-bungee text-sm px-7 py-4 border-2 border-ink bg-ink text-paper inline-flex items-center gap-2.5 uppercase tracking-wider cursor-pointer transition-all;
+    box-shadow: 6px 6px 0 #d63031;
+  }
+  .btn-primary:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 #d63031;
+  }
+  .btn-alt {
+    @apply font-bungee text-sm px-7 py-4 border-2 border-ink bg-paper text-ink inline-flex items-center gap-2.5 uppercase tracking-wider cursor-pointer transition-all;
+    box-shadow: 6px 6px 0 #141210;
+  }
+  .btn-alt:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0 #141210;
+  }
+}
