@@ -19,12 +19,12 @@
 
 export const config = {
   // ─── LAUNCH STATE ──────────────────────────────────────────────
-  IS_LIVE: false,
+  IS_LIVE: true,
 
   // ─── CONTRACT ADDRESSES ────────────────────────────────────────
-  TOKEN_CA: '',
-  VAULT_CONTRACT: '',
-  TREASURY_CONTRACT: '',
+  TOKEN_CA: '0x421bbbb40afb51aa625a10f0c59b0fd901f37777',
+  VAULT_CONTRACT: '0x421bbbb40afb51aa625a10f0c59b0fd901f37777',
+  TREASURY_CONTRACT: '0x75d13310bed23c3cf8ae844e2d069e688ecaf310',
 
   // ─── SOCIAL LINKS ──────────────────────────────────────────────
   TWITTER_URL: 'https://x.com/heist_pool',
