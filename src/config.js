@@ -28,9 +28,9 @@ export const config = {
 
   // ─── SOCIAL LINKS ──────────────────────────────────────────────
   TWITTER_URL: 'https://x.com/heist_pool',
-  TELEGRAM_URL: '#',
-  FLAP_URL: '#',
-  WEBSITE: 'heistgame.fun',
+  TELEGRAM_URL: 'https://x.com/heist_pool',
+  FLAP_URL: 'https://flap.sh/',
+  WEBSITE: 'https://heistgame.fun/',
 
   // ─── DISPLAY STRINGS ───────────────────────────────────────────
   COMING_SOON: 'COMING SOON',
